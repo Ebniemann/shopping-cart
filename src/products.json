@@ -1,0 +1,137 @@
+[
+    {
+        "id": 1,
+        "name": "Introducción a HTML y CSS",
+        "price": 50.00,
+        "stock": 120,
+        "min_description": "Aprende las bases del desarrollo web con HTML5 y CSS3.",
+        "image": "https://placehold.co/400x300?text=HTML+CSS",
+        "category": "Desarrollo Web"
+    },
+    {
+        "id": 2,
+        "name": "JavaScript desde cero",
+        "price": 90.00,
+        "stock": 100,
+        "min_description": "Domina los fundamentos de la programación con JavaScript.",
+        "image": "https://placehold.co/400x300?text=JavaScript",
+        "category": "Desarrollo Web"
+    },
+    {
+        "id": 3,
+        "name": "React para principiantes",
+        "price": 80.00,
+        "stock": 85,
+        "min_description": "Crea aplicaciones modernas con React y componentes funcionales.",
+        "image": "https://placehold.co/400x300?text=React",
+        "category": "Desarrollo Web"
+    },
+    {
+        "id": 4,
+        "name": "Backend con Node.js",
+        "price": 100.00,
+        "stock": 70,
+        "min_description": "Construye APIs y servicios con Node.js y Express.",
+        "image": "https://placehold.co/400x300?text=Node.js",
+        "category": "Desarrollo Web"
+    },
+    {
+        "id": 5,
+        "name": "Arquitectura Frontend Avanzada",
+        "price": 30.00,
+        "stock": 60,
+        "min_description": "Aprende patrones y buenas prácticas en proyectos frontend grandes.",
+        "image": "https://placehold.co/400x300?text=Frontend+Avanzado",
+        "category": "Desarrollo Web"
+    },
+    {
+        "id": 6,
+        "name": "Fundamentos de Python para Data Science",
+        "price": 50.00,
+        "stock": 110,
+        "min_description": "Aprende a programar en Python con enfoque en análisis de datos.",
+        "image": "https://placehold.co/400x300?text=Python+Data",
+        "category": "Data Science"
+    },
+    {
+        "id": 7,
+        "name": "Análisis de Datos con Pandas",
+        "price": 25.00,
+        "stock": 95,
+        "min_description": "Manipula y analiza datos eficientemente con Pandas.",
+        "image": "https://placehold.co/400x300?text=Pandas",
+        "category": "Data Science"
+    },
+    {
+        "id": 8,
+        "name": "Visualización de Datos con Matplotlib",
+        "price": 10.00,
+        "stock": 80,
+        "min_description": "Crea gráficos y visualizaciones impactantes con Python.",
+        "image": "https://placehold.co/400x300?text=Matplotlib",
+        "category": "Data Science"
+    },
+    {
+        "id": 9,
+        "name": "Machine Learning Básico",
+        "price": 150.00,
+        "stock": 70,
+        "min_description": "Descubre algoritmos de aprendizaje automático y sus aplicaciones.",
+        "image": "https://placehold.co/400x300?text=ML+Basico",
+        "category": "Data Science"
+    },
+    {
+        "id": 10,
+        "name": "Deep Learning con TensorFlow",
+        "price": 120.00,
+        "stock": 55,
+        "min_description": "Construye redes neuronales con TensorFlow y Keras.",
+        "image": "https://placehold.co/400x300?text=TensorFlow",
+        "category": "Data Science"
+    },
+    {
+        "id": 11,
+        "name": "Principios del Diseño Gráfico",
+        "price": 75.00,
+        "stock": 130,
+        "min_description": "Aprende teoría del color, tipografía y composición visual.",
+        "image": "https://placehold.co/400x300?text=Diseño+Grafico",
+        "category": "Diseño"
+    },
+    {
+        "id": 12,
+        "name": "Diseño UX/UI",
+        "price": 90.00,
+        "stock": 90,
+        "min_description": "Diseña interfaces atractivas y experiencias centradas en el usuario.",
+        "image": "https://placehold.co/400x300?text=UX+UI",
+        "category": "Diseño"
+    },
+    {
+        "id": 13,
+        "name": "Adobe Illustrator para principiantes",
+        "price": 60.00,
+        "stock": 100,
+        "min_description": "Crea gráficos vectoriales y diseños con Illustrator.",
+        "image": "https://placehold.co/400x300?text=Illustrator",
+        "category": "Diseño"
+    },
+    {
+        "id": 14,
+        "name": "Diseño de Prototipos con Figma",
+        "price": 20.00,
+        "stock": 85,
+        "min_description": "Diseña y prototipa interfaces interactivas con Figma.",
+        "image": "https://placehold.co/400x300?text=Figma",
+        "category": "Diseño"
+    },
+    {
+        "id": 15,
+        "name": "Animación y Motion Graphics",
+        "price": 130.00,
+        "stock": 60,
+        "min_description": "Crea animaciones digitales y efectos visuales modernos.",
+        "image": "https://placehold.co/400x300?text=Motion+Graphics",
+        "category": "Diseño"
+    }
+]
