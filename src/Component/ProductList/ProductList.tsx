@@ -18,7 +18,7 @@ const ProductList = () => {
                         <Card
                             hoverable
                             cover={<img alt={p.name} src={p.image} />}
-                            actions={[<Button type="primary" onClick={() => addToCart(p)} >Añadir al carrito</Button>]}
+                            actions={[<Button type="primary" onClick={() => addToCart(p)} style={{ backgroundColor: "#E9E4F8", fontWeight: 'bold', color: "#8E79C0" }} >Añadir al carrito</Button>]}
                         >
                             <Meta
                                 title={p.name}

@@ -6,10 +6,42 @@ export const PageContainer = styled.div`
   background-color: #f4f4f9;
   position: relative;
 `;
+
+export const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+`;
+
+export const Title = styled.h1`
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #464646;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+`;
+
+export const Subtitle = styled.p`
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 1.3rem;
+  color: #6B6FA3;
+  text-align: center;
+  margin-bottom: 2rem;
+`;
+
+
 export const ButtonCart = styled.div`
-  position: absolute;
-    right: 10px;
-    top: 8px;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -18,30 +50,12 @@ export const ButtonCart = styled.div`
     cursor: pointer;
 
     p {
-         position: absolute;
-    right: 26px;
-    top: 5px;
+      position: absolute;
+      right: 26px;
+      top: 5px;
       font-weight: bold;
       color: #000000;
     }
-`;
-
-export const Title = styled.h1`
-text-align: center;
-color: #333;
-margin-bottom: 0.5rem;
-`;
-
-export const Subtitle = styled.p`
-text-align: center;
-color: #666;
-margin-bottom: 2rem;
-`;
-
-export const Image = styled.img`
-position: absolute;
-right: 10px;
-top: 8px;
 `;
 
 
