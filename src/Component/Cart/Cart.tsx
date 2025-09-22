@@ -1,6 +1,6 @@
-import { Item, CartSidebar, CloseButton, Buttons } from './styled.ts'
+import { Item, CartSidebar, CloseButton, Buttons, CartHeader, CartBody, CartFooter } from './styled';
 import { useContext } from "react";
-import { cartContext } from "../../Context/CartContext.tsx";
+import { cartContext } from "../../Context/CartContext";
 
 type SidebarProps = {
     onClose: () => void;
@@ -8,21 +8,24 @@ type SidebarProps = {
 
 const Cart = ({ onClose }: SidebarProps) => {
     const context = useContext(cartContext);
-    if (!context) {
-        return <div>Cargando...</div>;
-    }
-    const { cart, removeFromCart, subTotal, getCartTotal } = context;
+    if (!context) return <div>Cargando...</div>;
+
+    const { cart, removeFromCart, subTotal, getCartTotal, addToCart } = context;
+
     return (
-
         <CartSidebar>
-            <CloseButton onClick={onClose} > X </CloseButton>
-            <h1>Mi  Carrito</h1>
+            {/* Header */}
+            <CartHeader>
+                <h1>Mi Carrito</h1>
+                <CloseButton onClick={onClose}>✕</CloseButton>
+            </CartHeader>
 
-            {cart.length === 0 ? (
-                <p>El carrito está vacío</p>
-            ) : (
-                <>
-                    {cart.map((item) => (
+            {/* Body scrollable */}
+            <CartBody>
+                {cart.length === 0 ? (
+                    <p>El carrito está vacío</p>
+                ) : (
+                    cart.map((item) => (
                         <Item key={item.id}>
                             <img src={item.image} alt={item.name} />
                             <div>
@@ -32,17 +35,20 @@ const Cart = ({ onClose }: SidebarProps) => {
                                 <p>Sub-Total: ${subTotal(item).toFixed(2)}</p>
                                 <Buttons>
                                     <button onClick={() => removeFromCart(item.id)}>Eliminar</button>
-                                    <button onClick={() => context.addToCart(item)}>Sumar</button>
+                                    <button onClick={() => addToCart(item)}>Sumar</button>
                                 </Buttons>
                             </div>
                         </Item>
-                    ))}
-                    <h2>Total: ${getCartTotal().toFixed(2)}</h2>
-                </>
-            )}
+                    ))
+                )}
+            </CartBody>
+
+            {/* Footer */}
+            <CartFooter>
+                <h2>Total: ${getCartTotal().toFixed(2)}</h2>
+            </CartFooter>
         </CartSidebar>
+    );
+};
 
-    )
-}
-
-export default Cart
+export default Cart;

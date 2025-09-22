@@ -1,111 +1,151 @@
-// styled.ts
-
 import styled from 'styled-components';
 
-export const CartSidebar = styled.div`
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 350px; /* Ajusta el ancho a tu gusto */
-  height: 100%;
-  background-color: #fff;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out;
-  z-index: 1000;
-  padding: 2rem;
-  overflow-y: auto;
-`;
 
 export const Item = styled.div`
   display: flex;
-  align-items: center;
-  gap: 20px;
+  gap: 16px;
   padding: 15px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.02);
+  }
 
   img {
     width: 80px;
     height: 80px;
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: 6px;
     border: 1px solid #eee;
   }
 
   h2 {
-    flex-grow: 1; /* Permite que el título ocupe el espacio disponible */
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #333;
-    margin: 0;
+    margin: 0 0 5px;
   }
 
   p {
-    margin: 5px 0;
-    color: #666;
-    font-size: 1rem;
-    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+    margin: 3px 0;
+    color: #555;
+    font-size: 0.9rem;
   }
+`;
+export const Buttons = styled.div`
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
 
   button {
-    background-color: #007bff;
-    color: white;
-    border: none;
+    flex: 1;
     padding: 8px 12px;
-    border-radius: 5px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
     cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    border: none;
+    transition: background 0.3s;
 
-    &:hover {
-      background-color: #0056b3;
+    &:first-of-type {
+      background-color: #28a745;
+      color: #fff;
+
+      &:hover {
+        background-color: #218838;
+      }
     }
 
     &:last-of-type {
-      background-color: #dc3545; /* Estilo para el botón de 'Eliminar' o el último botón */
+      background-color: #dc3545;
+      color: #fff;
+
       &:hover {
         background-color: #c82333;
       }
     }
   }
 `;
+export const Total = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #222;
+  padding-top: 1rem;
+  border-top: 2px solid #eee;
+`;
+export const CartSidebar = styled.div`
+  position: fixed;
+  top: 50px; /* un poco más abajo del top */
+  right: 20px;
+  width: 350px;
+  height: 80vh; /* alto definido */
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  z-index: 1000;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+`;
 
-export const CartContainer = styled.div`
-  /* Estilo para el contenedor principal del carrito */
-  width: 25%;
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
+export const CartHeader = styled.div`
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
 
   h1 {
-    text-align: center;
+    font-size: 1.5rem;
+    margin: 0;
     color: #333;
-    margin-bottom: 30px;
+  }
+`;
+export const CartBody = styled.div`
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+
+  /* scroll bonito */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
+  }
+`;
+
+export const CartFooter = styled.div`
+  flex: 0 0 auto;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #eee;
+
+  h2 {
+    margin: 0;
+    text-align: right;
+    color: #000;
   }
 `;
 
 export const CloseButton = styled.button`
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
+  top: 15px;
+  right: 15px;
+  background: transparent;
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
+  color: #888;
 
   &:hover {
-    color: #007bff;
-  }   
-
-`;
-export const Buttons = styled.div`
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
+    color: #555;
+  }
 `;

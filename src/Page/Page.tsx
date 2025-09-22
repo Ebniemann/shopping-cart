@@ -4,6 +4,7 @@ import CartImage from '../assets/cart.png';
 import { useState, useContext } from 'react';
 import { cartContext } from '../Context/CartContext.tsx';
 import Cart from '../Component/Cart/Cart.tsx';
+import { Badge } from 'antd';
 
 
 const Page = () => {
@@ -15,12 +16,12 @@ const Page = () => {
     }
 
     const { cart } = context!;
-    console.log('carrito', cart);
+
     return (
         <PageContainer>
             <ButtonCart>
                 <Image src={CartImage} alt="cart icon" onClick={toggleCart} />
-                <p>{cart.length}</p>
+                <Badge count={cart.length} />
             </ButtonCart>
             {openCart && <Cart onClose={() => setOpenCart(false)} />}
             <Title>Productos</Title>
