@@ -1,10 +1,19 @@
 import styled from "styled-components";
 
+const breakpoints = {
+  mobile: "480px",
+  tablet: "768px",
+  desktop: "1024px",
+};
+
 export const PageContainer = styled.div`
   font-family: 'Arial', sans-serif;
-  padding: 2rem;
+  padding: 1rem;
   background-color: #f4f4f9;
   position: relative;
+  
+  @media (min-width: ${breakpoints.desktop}) {
+  padding: 2rem;
 `;
 
 export const Header = styled.div`
@@ -12,23 +21,33 @@ export const Header = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
   z-index: 10;
+
+  @media (min-width: ${breakpoints.desktop}) {
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
+  }
 `;
 
 export const Title = styled.h1`
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2rem;
   color: #464646;
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0px;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+
+  @media (min-width: ${breakpoints.desktop}) {
+    font-size: 3rem;
+     margin-bottom: 0.5rem;
+  }
 `;
 
 export const Subtitle = styled.p`
@@ -39,7 +58,6 @@ export const Subtitle = styled.p`
   text-align: center;
   margin-bottom: 2rem;
 `;
-
 
 export const ButtonCart = styled.div`
     display: flex;

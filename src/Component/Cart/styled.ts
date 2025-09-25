@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+const breakpoints = {
+  mobile: "480px",
+  tablet: "768px",
+  desktop: "1024px",
+};
+
 
 export const Item = styled.div`
   display: flex;
@@ -81,10 +87,10 @@ export const Total = styled.div`
 `;
 export const CartSidebar = styled.div`
   position: fixed;
-  top: 50px; /* un poco más abajo del top */
+  top: 75px; 
   right: 20px;
-  width: 350px;
-  height: 80vh; /* alto definido */
+  width: 335px;
+  height: 65vh; 
   background-color: #fff;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
@@ -92,6 +98,11 @@ export const CartSidebar = styled.div`
   padding: 1rem;
   display: flex;
   flex-direction: column;
+@media (min-width: ${breakpoints.tablet}) {
+ width: 350px;
+ height: 80vh; 
+   top: 50px; 
+}
 `;
 
 export const CartHeader = styled.div`

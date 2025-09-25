@@ -1,12 +1,13 @@
 import ProductList from '../Component/ProductList/ProductList.tsx';
 import { PageContainer, ButtonCart, Title, Subtitle, Header } from './styled.ts'
 import CartImage from '../assets/cart.png';
-import { useState, useContext } from 'react';
+import { useState, useContext, use } from 'react';
 import { cartContext } from '../Context/CartContext.tsx';
 import Cart from '../Component/Cart/Cart.tsx';
 import { Badge, Dropdown, Space } from 'antd';
 import type { MenuProps } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
+import useIsMobile from '../Hoock/Hoocks.tsx';
 
 const items: MenuProps['items'] = [
     {
@@ -39,6 +40,7 @@ const items: MenuProps['items'] = [
 const Page = () => {
     const context = useContext(cartContext);
     const [openCart, setOpenCart] = useState(false);
+    const isMobile = useIsMobile();
 
     const toggleCart = () => {
         setOpenCart(!openCart);
@@ -59,13 +61,13 @@ const Page = () => {
                 </Dropdown>
                 <Title>Mi Tienda</Title>
                 <ButtonCart onClick={toggleCart}>
-                    <Badge count={cart.length} size="default" color="#f5222d" style={{
+                    <Badge count={cart.length} size={isMobile ? "small" : "default"} color="#f5222d" style={{
                         position: 'absolute',
                         top: -10,
                         right: -10,
                         transform: 'translate(-10%, 45%)',
                     }}>
-                        <img src={CartImage} alt="cart icon" />
+                        <img src={CartImage} alt="cart icon" style={{ width: isMobile ? '30px' : '48px' }} />
                     </Badge>
                 </ButtonCart>
             </Header>

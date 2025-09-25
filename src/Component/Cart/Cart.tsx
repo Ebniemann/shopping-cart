@@ -14,13 +14,11 @@ const Cart = ({ onClose }: SidebarProps) => {
 
     return (
         <CartSidebar>
-            {/* Header */}
             <CartHeader>
                 <h1>Mi Carrito</h1>
                 <CloseButton onClick={onClose}>✕</CloseButton>
             </CartHeader>
 
-            {/* Body scrollable */}
             <CartBody>
                 {cart.length === 0 ? (
                     <p>El carrito está vacío</p>
@@ -43,7 +41,6 @@ const Cart = ({ onClose }: SidebarProps) => {
                 )}
             </CartBody>
 
-            {/* Footer */}
             <CartFooter>
                 <h2>Total: ${getCartTotal().toFixed(2)}</h2>
             </CartFooter>
